@@ -1,0 +1,17 @@
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\bin\Debug\net6.0-windows\PortSimulation.exe
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\bin\Debug\net6.0-windows\PortSimulation.deps.json
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\bin\Debug\net6.0-windows\PortSimulation.runtimeconfig.json
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\bin\Debug\net6.0-windows\PortSimulation.dll
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\bin\Debug\net6.0-windows\PortSimulation.pdb
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.csproj.AssemblyReference.cache
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.Form1.resources
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.csproj.GenerateResource.cache
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.AssemblyInfoInputs.cache
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.AssemblyInfo.cs
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.csproj.CoreCompileInputs.cache
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.dll
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\refint\PortSimulation.dll
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.pdb
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\PortSimulation.genruntimeconfig.cache
+E:\Study\6 семестр\Архитектура ПО\PortSimulation\PortSimulation\obj\Debug\net6.0-windows\ref\PortSimulation.dll
