@@ -9,26 +9,26 @@ namespace PortSimulation
 {
     internal interface IFactoryMethodShip
     {
-        Ship createShip(ShipState state);
+        Ship createShip(ShipState state, Stratagy stratagy);
     }
 
     internal class BulkCarrierFactory : IFactoryMethodShip
     {
-        public Ship createShip(ShipState state) { return new BulkCarrierShip(state); }
+        public Ship createShip(ShipState state, Stratagy stratagy) { return new BulkCarrierShip(state,stratagy); }
     }
 
     internal class TankerFactory : IFactoryMethodShip
     {
-        public Ship createShip(ShipState state) { return new TankerShip(state); }
+        public Ship createShip(ShipState state, Stratagy stratagy) { return new TankerShip(state, stratagy); }
     }
 
     internal class GasCarriersFactory : IFactoryMethodShip
     {
-        public Ship createShip(ShipState state) { return new GasCarriersShip(state); }
+        public Ship createShip(ShipState state, Stratagy stratagy) { return new GasCarriersShip(state, stratagy); }
     }
 
     internal class ContainerCarriersFactory : IFactoryMethodShip
     {
-        public Ship createShip(ShipState state) { return new ContainerCarriersShip(state); }
+        public Ship createShip(ShipState state, Stratagy stratagy) { return new ContainerCarriersShip(state, stratagy); }
     }
 }

@@ -12,31 +12,36 @@ namespace PortSimulation
 
     internal class Ship
     {
-        public ShipState m_state { get; set; }
+        protected ShipState m_state;
+        protected Stratagy m_pStratagy;
 
-        public Ship(ShipState state) 
+        public Ship() { }
+        public Ship(ShipState state,Stratagy stratagy) 
         {
             m_state = state;
+            m_pStratagy = stratagy;
         }
+
+        public void setState(ShipState state) { m_state = state; }
     }
 
     internal class BulkCarrierShip : Ship
     {
-        public BulkCarrierShip(ShipState state) : base(state) { }
+        public BulkCarrierShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
     }
 
     internal class TankerShip : Ship
     {
-        public TankerShip(ShipState state) : base(state) { }
+        public TankerShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
     }
 
     internal class GasCarriersShip : Ship
     {
-        public GasCarriersShip(ShipState state) : base(state) { }
+        public GasCarriersShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
     }
 
     internal class ContainerCarriersShip : Ship
     {
-        public ContainerCarriersShip(ShipState state) : base(state) { }
+        public ContainerCarriersShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
     }
 }
