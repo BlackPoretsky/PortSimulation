@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\goroc\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\goroc\\.nuget\\packages",
+      "C:\\Users\\Bazelevs\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Bazelevs\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

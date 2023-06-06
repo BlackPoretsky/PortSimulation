@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Study\\6 семестр\\Архитектура ПО\\PortSimulation\\PortSimulation\\PortSimulation.csproj": {}
+    "C:\\Users\\Bazelevs\\source\\repos\\AT&SDT\\Lab4\\PortSimulation\\PortSimulation\\PortSimulation.csproj": {}
   },
   "projects": {
-    "E:\\Study\\6 семестр\\Архитектура ПО\\PortSimulation\\PortSimulation\\PortSimulation.csproj": {
+    "C:\\Users\\Bazelevs\\source\\repos\\AT&SDT\\Lab4\\PortSimulation\\PortSimulation\\PortSimulation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Study\\6 семестр\\Архитектура ПО\\PortSimulation\\PortSimulation\\PortSimulation.csproj",
+        "projectUniqueName": "C:\\Users\\Bazelevs\\source\\repos\\AT&SDT\\Lab4\\PortSimulation\\PortSimulation\\PortSimulation.csproj",
         "projectName": "PortSimulation",
-        "projectPath": "E:\\Study\\6 семестр\\Архитектура ПО\\PortSimulation\\PortSimulation\\PortSimulation.csproj",
-        "packagesPath": "C:\\Users\\goroc\\.nuget\\packages\\",
-        "outputPath": "E:\\Study\\6 семестр\\Архитектура ПО\\PortSimulation\\PortSimulation\\obj\\",
+        "projectPath": "C:\\Users\\Bazelevs\\source\\repos\\AT&SDT\\Lab4\\PortSimulation\\PortSimulation\\PortSimulation.csproj",
+        "packagesPath": "C:\\Users\\Bazelevs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bazelevs\\source\\repos\\AT&SDT\\Lab4\\PortSimulation\\PortSimulation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\goroc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bazelevs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

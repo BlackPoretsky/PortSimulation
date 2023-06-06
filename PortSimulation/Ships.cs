@@ -10,38 +10,36 @@ using static System.Windows.Forms.AxHost;
 namespace PortSimulation
 {
 
-    internal class Ship
-    {
-        protected ShipState m_state;
-        protected Stratagy m_pStratagy;
+	internal class Ship
+	{
+		public ShipState State { get; private set; }
 
-        public Ship() { }
-        public Ship(ShipState state,Stratagy stratagy) 
-        {
-            m_state = state;
-            m_pStratagy = stratagy;
-        }
+		public Ship(ShipState state) { State = state; }
 
-        public void setState(ShipState state) { m_state = state; }
-    }
+		public void ChangeState()
+		{
+			if (State == ShipState.Loaded) State = ShipState.Unloaded;
+			else if (State == ShipState.Unloaded) State = ShipState.Loaded;
+		}
+	}
 
-    internal class BulkCarrierShip : Ship
-    {
-        public BulkCarrierShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
-    }
+	internal class BulkCarrier : Ship
+	{
+		public BulkCarrier(ShipState state) : base(state) { }
+	}
 
-    internal class TankerShip : Ship
-    {
-        public TankerShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
-    }
+	internal class Tanker : Ship
+	{
+		public Tanker(ShipState state) : base(state) { }
+	}
 
-    internal class GasCarriersShip : Ship
-    {
-        public GasCarriersShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
-    }
+	internal class GasCarrier : Ship
+	{
+		public GasCarrier(ShipState state) : base(state) { }
+	}
 
-    internal class ContainerCarriersShip : Ship
-    {
-        public ContainerCarriersShip(ShipState state, Stratagy stratagy) : base(state, stratagy) { }
-    }
+	internal class ContainerCarrier : Ship
+	{
+		public ContainerCarrier(ShipState state) : base(state) { }
+	}
 }

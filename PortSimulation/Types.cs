@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace PortSimulation
 {
-    enum ShipState { Load, Unload }
+	enum ShipState { Loaded, Unloaded }
 }

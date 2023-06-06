@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 
 namespace PortSimulation
 {
-    internal class Hydrometeorologist
-    {
-        private bool m_stateWeather = true;
-        private Dispatcher m_pDispatcher = null;
-        private Random random = new Random();
+	internal class Hydrometeorologist
+	{
+		private bool WeatherIsClear = true;
+		public Dispatcher? Dispatcher { get; set; }
+		private Random random = new Random();
 
-        public void attach(Dispatcher dispatcher)
-        {
-            m_pDispatcher = dispatcher;
-        }
-
-        public void generateWeather() 
-        {
-            m_stateWeather = random.Next(2) == 0;
-            m_pDispatcher.updateWeather(m_stateWeather);
-        }
-        
-    }
+		public void Forecast() 
+		{
+			WeatherIsClear = random.Next(2) == 0;
+			Dispatcher!.WeatherIsClear = WeatherIsClear;
+		}
+		
+	}
 }
