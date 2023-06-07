@@ -7,60 +7,99 @@ using System.Threading.Tasks;
 
 namespace PortSimulation
 {
-	public delegate void Handler(string message);
+	public delegate void Handler(string? message);
 	internal class Dispatcher
 	{
-		private List<Berth> berths = new List<Berth>();
+		public List<Berth> Berths { get; } = new List<Berth>();
 		public Raid raid { get; } = new Raid();
-		public bool WeatherIsClear { set => WeatherIsClear = value; }
-		event Handler Notify;
+		public bool WeatherIsClear { private get; set; }
+		public event Handler? Notify;
 
 		public Dispatcher(Hydrometeorologist hydrometeorologist) 
 		{
 			hydrometeorologist.Dispatcher = this;
 		}
 
-		public void AddBerth(Berth berth) { berths.Add(berth); }
-		public void AddShip(Ship ship) { raid.PutInQueue(ship); }
+		public void AddBerth(Berth berth) 
+		{ 
+			Berths.Add(berth);
+			Notify!(berth.ToString() + " is ready to work");
+		}
+		public void AddShip(Ship ship) 
+		{
+			raid.PutInQueue(ship);
+			Notify!(ship.ToString() + " arrived to the raid");
+		}
+		private string? MakeReport(Ship? ship, Berth berth)
+		{
+			if (ship == null) return null;
+			string message = ship.ToString();
+			if (ship.State == ShipState.Unloaded)
+				message += " is unloaded at ";
+			else
+				message += " is loaded at ";
+			return message + berth.ToString();
+		}
 		public void Manage()
 		{
-			foreach (Berth berth in berths)
+			foreach (Berth berth in Berths)
 			{
-				if (berth.IsFree())
+				if (!WeatherIsClear)
+				{
+					Ship? ship = berth.MoorShip();
+					if (ship != null)
+					{
+						raid.ReturnInQueue(ship);
+						Notify!(ship.ToString() + " is returned to the raid");
+					}
+				}
+				else if (berth.IsFree())
 				{
 					if (berth is BulkCarriersBerth)
 					{
 						berth.DockShip(raid.MoveBulkCarrierShip());
 						berth.Service();
+						Notify!(MakeReport(berth.Ship, berth));
 					}
 					else if (berth is TankersBerth)
 					{
 						berth.DockShip(raid.MoveTankerShip());
 						berth.Service();
+						Notify!(MakeReport(berth.Ship, berth));
 					}
 					else if (berth is GasCarriersBerth)
 					{
 						berth.DockShip(raid.MoveGasCarrierShip());
 						berth.Service();
+						Notify!(MakeReport(berth.Ship, berth));
 					}
 					else if (berth is ContainerCarriersBerth)
 					{
 						berth.DockShip(raid.MoveContainerCarrierShip());
 						berth.Service();
+						Notify!(MakeReport(berth.Ship, berth));
 					}
 				}
 				else
 				{
 					if (berth.Ship!.State == ShipState.Loaded)
 					{
-						berth.MoorShip();
+						Ship ship = berth.MoorShip()!;
+						Notify!(ship.ToString() + " has left the port");
 					}
 					else
 					{
 						var rand = new Random();
 						bool wait = rand.Next(2) == 0;
 						Ship ship = berth.MoorShip()!;
-						if (wait) raid.PutInQueue(ship);
+						string message = ship.ToString();
+						if (wait)
+						{
+							raid.PutInQueue(ship);
+							message += " moved to the raid";
+						}
+						else message += " has left the port";
+						Notify!(message);
 					}
 				}
 			}

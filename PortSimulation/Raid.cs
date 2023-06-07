@@ -21,6 +21,13 @@ namespace PortSimulation
 			m_pContainerCarriers = new LinkedList<Ship>();
 		}
 
+		public void Clear()
+		{
+			m_pBulkCarriers.Clear();
+			m_pTankers.Clear();
+			m_pGasCarriers.Clear();
+			m_pContainerCarriers.Clear();
+		}
 		public void PutInQueue(Ship ship)
 		{
 			if (ship is BulkCarrier) m_pBulkCarriers.AddLast(ship);

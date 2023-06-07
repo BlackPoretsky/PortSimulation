@@ -63,6 +63,16 @@ namespace PortSimulation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap f1cf5ace6b7a64937904258004603736 {
+            get {
+                object obj = ResourceManager.GetObject("f1cf5ace6b7a64937904258004603736", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap МАОУ_гимназия_имени_Антона_Павловича_Чехова_3 {
             get {
                 object obj = ResourceManager.GetObject("МАОУ гимназия имени Антона Павловича Чехова 3", resourceCulture);

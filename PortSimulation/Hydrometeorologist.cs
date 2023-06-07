@@ -8,7 +8,7 @@ namespace PortSimulation
 {
 	internal class Hydrometeorologist
 	{
-		private bool WeatherIsClear = true;
+		public bool WeatherIsClear { get; private set; } = true;
 		public Dispatcher? Dispatcher { get; set; }
 		private Random random = new Random();
 
